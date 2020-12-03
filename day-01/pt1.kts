@@ -1,3 +1,4 @@
+// https://adventofcode.com/2020/day/1
 
 val expenses = generateSequence(::readLine).toList().map { s -> s.toInt() }.toTypedArray().sorted()
 
