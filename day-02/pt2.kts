@@ -1,4 +1,4 @@
-// https://adventofcode.com/2020/day/2
+// https://adventofcode.com/2020/day/2#part2
 
 // Entry sample: 1-3 a: abcde
 val validEntries = generateSequence(::readLine).toList()
@@ -8,8 +8,8 @@ val validEntries = generateSequence(::readLine).toList()
 
 println(validEntries.size)
 
-data class Entry(val min: Int, val max: Int, val char: Char, val password: String)
+data class Entry(val first: Int, val second: Int, val char: Char, val password: String)
 
 fun Entry.isValid(): Boolean {
-    return password.count { c -> c.equals(char) } in min..max
+    return (password[first - 1] == char).xor(password[second - 1] == char)
 }
