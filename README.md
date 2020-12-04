@@ -1,4 +1,4 @@
-# Advent Of Code 2020
+# Advent of Code 2020
 
 AoC [website](https://adventofcode.com/) for more info.
 
@@ -6,7 +6,7 @@ My attempt to participate in this year AoC. This time, instead of focusing on pe
 
 In order to do that, I'm using Kotlin for scripting (.kts files).
 
-To run the scripts use:
+To run the scripts use
 
 ```bash
 $ kotlinc -script path/to/script.kts < path/to/input.txt
