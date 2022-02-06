@@ -25,8 +25,7 @@ fun findTwoValues(map: Map<Int, Int>): List<Int>? {
 
 fun findThreeValues(numbers: List<Int>): List<Int>? {
     return numbers.firstNotNullOfOrNull { currentNumber ->
-        val twoValues = findTwoValues(numbers.associateWith { 2020 - currentNumber - it })
-        if (twoValues != null) twoValues + currentNumber else null
+        findTwoValues(numbers.associateWith { 2020 - currentNumber - it })?.let { it + currentNumber }
     }
 }
 
